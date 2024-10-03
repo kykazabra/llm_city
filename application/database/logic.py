@@ -36,5 +36,5 @@ def with_session(fn):
 
 
 @with_session
-def load_agent_profile(id, session=None):
+def load_agent_profile(id: int, session=None) -> AgentProfile:
     return session.query(AgentProfile).get(id)

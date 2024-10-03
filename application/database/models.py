@@ -12,13 +12,5 @@ class AgentProfile(Base):
     bio = sa.Column(sa.String(512))
     avatar = sa.Column(sa.String(256))
 
-    def to_dict(self):
-        return {
-            "id": self.id,
-            "nickname": self.nickname,
-            "full_name": self.full_name,
-            "bio": self.bio
-        }
-
     def __repr__(self):
         return f"AgentProfile(id={self.id}, nickname='{self.nickname}', full_name='{self.full_name}', bio='{self.bio}', avatar='{self.avatar}')"
