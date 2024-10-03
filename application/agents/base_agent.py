@@ -10,6 +10,10 @@ import re
 
 
 class CityVillager:
+    """
+    Базовый класс для
+    """
+
     def __init__(
             self,
             llm: BaseChatModel,
