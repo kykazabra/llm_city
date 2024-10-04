@@ -5,6 +5,9 @@ from sqlalchemy.orm.session import Session
 from sqlalchemy import create_engine
 import os
 
+"""
+Модуль для логических запросов к БД
+"""
 
 def get_session():
     return Session(create_engine(os.environ.get('DB_CONNECTION_STRING')))

@@ -11,7 +11,7 @@ import re
 
 class CityVillager:
     """
-    Базовый класс для
+    Базовый класс для построения логики работы агента
     """
 
     def __init__(
@@ -57,5 +57,8 @@ class CityVillager:
 
         self.agent = self.llm.bind_tools(self.tools)
 
-    def invoke(self, task: int) -> Dict:
+    def _summarize(self, history):
+        pass
+
+    def invoke(self, task: str, status_history: List = None, user_hsitory: List = None) -> Dict:
         return self.agent.invoke([self.system_prompt, HumanMessage(content=task)]).additional_kwargs.get('tool_calls')[0].get('function')

@@ -3,6 +3,10 @@ from bs4 import BeautifulSoup
 from agents.base_agent import CityVillager
 import re
 
+"""
+Модуль для построения Mastodon ботов
+"""
+
 
 def parse_content(text: str) -> str:
     clear = BeautifulSoup(text, "html.parser").text

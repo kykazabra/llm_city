@@ -1,6 +1,10 @@
 from sqlalchemy.ext.declarative import declarative_base
 import sqlalchemy as sa
 
+"""
+Модуль для физического взаимодействия с БД
+"""
+
 Base = declarative_base()
 
 class AgentProfile(Base):
